@@ -610,8 +610,10 @@ main {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 10px;
     padding: 20px;
-    background-color: var(--color-background); /* Fondo del contenedor */
+    background-color: var(--color-background);
+    align-items: stretch; /* Asegura que todas las imágenes tengan la misma altura */
 }
+
 
 .collage-item {
     position: relative;
@@ -623,7 +625,8 @@ main {
 
 .collage-item img {
     width: 100%;
-    height: auto;
+    height: 100%; /* Antes estaba en auto, esto lo hace ocupar todo el contenedor */
+    object-fit: cover; /* Recorta la imagen sin deformarla */
     display: block;
     transition: transform 0.3s ease;
 }
@@ -702,7 +705,7 @@ main {
 }
 
 .music-image img {
-    width: 100%;
+    width: 120%;
     height: auto;
     display: block;
 }
