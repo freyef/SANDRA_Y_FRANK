@@ -97,14 +97,17 @@ window.addEventListener("load", () => {
     // Mostrar el número de años, meses y días en el dashboard
     document.getElementById(
       "daysCount"
-    ).innerText = `Ya han pasado ${years} ${yearText}, ${months} ${monthText} y ${days} ${dayText}, desde que comenzó nuestra historia de amor. Me alegra mucho estar aún a tu lado y disfrutar cada momento, eres la persona que amaré de por vida. ¡Te Amoo❤️!`;
+    ).innerText = `Ya han pasado ${years} ${yearText}, ${months} ${monthText} y ${days} ${dayText}, 
+    desde que te pedi que fueras mi enamorada y para ser sincero fue lo mejor que me pudo pasar en la vida. 
+    Me alegra mucho estar a tu lado y vivir cada momento, me pongo muy ansioso pero muy feliz con la idea de que esta pagina ira creciendo  
+     con nuestras aventuras y guardando todo lo que viviremos en nuestro  futuro,eres la persona que amaré de por vida. ¡TE AMOO❤️!`;
   }
 });
 
 particlesJS("particles-js", {
   particles: {
     number: {
-      value: 10, // Número de partículas (corazones)
+      value: 30, // Número de partículas (corazones)
       density: {
         enable: true,
         value_area: 800,
@@ -139,30 +142,6 @@ particlesJS("particles-js", {
   },
   retina_detect: true,
 });
-
-const mensajes = [
-    "Eres mi razón de sonreír cada día. 💖",
-    "Contigo, cada momento es especial. 🌟",
-    "Tu amor es mi mayor tesoro. 🏆",
-    "Eres mi hoy, mi mañana y mi siempre. 🌹",
-    "Gracias por hacerme tan feliz. 😊",
-    "Eres la mejor parte de mi día. ☀️",
-    "Mi corazón late por ti. 💓",
-];
-
-const mensajeTexto = document.getElementById("mensaje-texto");
-const nuevoMensajeBtn = document.getElementById("nuevo-mensaje-btn");
-
-function mostrarMensajeAleatorio() {
-    const mensajeAleatorio = mensajes[Math.floor(Math.random() * mensajes.length)];
-    mensajeTexto.textContent = mensajeAleatorio;
-}
-
-// Mostrar un mensaje aleatorio al cargar la página
-mostrarMensajeAleatorio();
-
-// Cambiar mensaje al hacer clic en el botón
-nuevoMensajeBtn.addEventListener("click", mostrarMensajeAleatorio);
 
 document.addEventListener('DOMContentLoaded', function() {
     const audio = document.getElementById('audio');
