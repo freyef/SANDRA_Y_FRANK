@@ -202,3 +202,37 @@ document.getElementById('sorpresa-btn').addEventListener('click', function() {
     contenido.classList.toggle('hidden'); // Muestra u oculta la sorpresa
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+  const images = document.querySelectorAll(".enlargeable-img"); // Selecciona todas las imágenes con la clase específica
+  const modal = document.createElement("div");
+  modal.id = "image-modal";
+  modal.style.position = "fixed";
+  modal.style.top = "0";
+  modal.style.left = "0";
+  modal.style.width = "100vw";
+  modal.style.height = "100vh";
+  modal.style.backgroundColor = "rgba(0, 0, 0, 0.8)";
+  modal.style.display = "none";
+  modal.style.justifyContent = "center";
+  modal.style.alignItems = "center";
+  modal.style.zIndex = "1000";
+  modal.style.cursor = "pointer";
+
+  const modalImg = document.createElement("img");
+  modalImg.style.maxWidth = "90%";
+  modalImg.style.maxHeight = "90%";
+  modal.appendChild(modalImg);
+
+  document.body.appendChild(modal);
+
+  images.forEach(img => {
+      img.addEventListener("click", function () {
+          modalImg.src = this.src;
+          modal.style.display = "flex";
+      });
+  });
+
+  modal.addEventListener("click", function () {
+      modal.style.display = "none";
+  });
+});

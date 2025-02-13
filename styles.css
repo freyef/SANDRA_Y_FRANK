@@ -846,3 +846,39 @@ audio {
         display: flex; /* Mostrar en móviles */
     }
 }
+/* Estilos para el modal de imagen */
+#image-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+#image-modal img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+#image-modal img:hover {
+    transform: scale(1.05);
+}
+
+/* Agregar efecto de cursor en las imágenes clickeables */
+.enlargeable-img {
+    cursor: zoom-in;
+    transition: transform 0.2s;
+}
+
+.enlargeable-img:hover {
+    transform: scale(1.02);
+}
